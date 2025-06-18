@@ -42,4 +42,4 @@ Big thanks to the [DEV Community](https://dev.to) for hosting this challenge!
    
   git clone https://github.com/Praneetb2929/june-css-art.git
 
-2.Open `index.html` in your browser  
+2. Open `index.html` in your browser  
