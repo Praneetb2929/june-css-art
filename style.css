@@ -1,0 +1,188 @@
+body {
+  margin: 0;
+  background: #87ceeb;
+  font-family: sans-serif;
+}
+
+.scene {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Sun */
+.sun {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, #FFD700, #FFA500);
+  border-radius: 50%;
+  animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* Pride Flag */
+.pride-flag {
+  position: absolute;
+  top: 100px;
+  left: 30px;
+  width: 120px;
+  height: 80px;
+  background: linear-gradient(to bottom,
+    red 16.66%, orange 16.66%, orange 33.32%, yellow 33.32%, yellow 49.98%,
+    green 49.98%, green 66.64%, blue 66.64%, blue 83.3%, violet 83.3%);
+  border: 3px solid #333;
+  animation: wave 2s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(2deg); }
+}
+
+/* Table */
+.table {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 180px;
+  background: #654321;
+}
+
+/* Father's Day Card */
+.card {
+  position: absolute;
+  bottom: 120px;
+  left: 170px;
+  width: 120px;
+  height: 80px;
+  background: #fff;
+  border: 2px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #333;
+  transform: rotate(-5deg);
+}
+
+/* Cake */
+.cake {
+  position: absolute;
+  bottom: 120px;
+  left: 320px;
+  width: 60px;
+  height: 40px;
+  background: #d2691e;
+  border: 2px solid #000;
+  border-radius: 0 0 5px 5px;
+}
+
+.cake::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: 0;
+  width: 60px;
+  height: 15px;
+  background: #fff8dc;
+  border-bottom: 2px solid #000;
+}
+
+/* Calendar */
+.calendar {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 70px;
+  height: 70px;
+  background: #fff;
+  border: 3px solid #000;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #c00;
+}
+
+/* Donut */
+.donut {
+  position: absolute;
+  bottom: 130px;
+  left: 420px;
+  width: 50px;
+  height: 50px;
+  background: #f4a460;
+  border-radius: 50%;
+  border: 2px solid #000;
+}
+
+.donut::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 30px;
+  height: 30px;
+  background: #87ceeb;
+  border-radius: 50%;
+}
+
+.donut::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  background-image: radial-gradient(#ff69b4 2px, transparent 2px),
+                    radial-gradient(#fff 2px, transparent 2px),
+                    radial-gradient(#32cd32 2px, transparent 2px);
+  background-size: 10px 10px;
+}
+
+/* Labels (Speech Bubbles) */
+.label {
+  position: absolute;
+  background: #fff;
+  padding: 4px 10px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #333;
+}
+
+.flag-label {
+  top: 80px;
+  left: 30px;
+}
+
+.card-label {
+  bottom: 210px;
+  left: 170px;
+}
+
+.cake-label {
+  bottom: 210px;
+  left: 320px;
+}
+
+.calendar-label {
+  top: 110px;
+  right: 30px;
+}
+
+.donut-label {
+  bottom: 210px;
+  left: 420px;
+}
